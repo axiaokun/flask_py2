@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        <textarea name="text"></textarea>
+        <input type="submit" value="提交">
+    </form>
+    {{ text | safe}} <!--一般情况下是默认转义的防止xss攻击， 这里估计将转义关掉也就是加入safe，在页面输入一些HTML语句例如
+    "<script>alert("hello attack");</script>"-->
+</body>
+</html>
